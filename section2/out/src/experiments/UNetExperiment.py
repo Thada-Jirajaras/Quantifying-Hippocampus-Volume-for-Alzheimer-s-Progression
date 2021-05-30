@@ -109,7 +109,7 @@ class UNetExperiment:
             loss = self.loss_function(prediction, target[:, 0, :, :].to(self.device))
 
             # TASK: What does each dimension of variable prediction represent?
-            # ANSWER: # sample index in batch, 3 classes, coronal, sagittal????????????????????????????????????? #################
+            # ANSWER: # sample index in batch, 3 classes, coronal, sagittal (Not sure how to figure this out, the answer are from the default order of the view controllers of the slicer program which is the order of Axial Coronal and Sagittal respectively.)
 
             loss.backward()
             self.optimizer.step()
