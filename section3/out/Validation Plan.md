@@ -1,10 +1,17 @@
+# What is the intended use of the product?
+
+The intended use is to build an end-to-end AI system which features a machine learning algorithm that integrates into a clinical-grade viewer and automatically measures hippocampal volumes of new patients, as their studies are committed to the clinical imaging archive.
+
 # Validation Plan
 
-## How is ground truth defined?
-The silver standard of radiologist reading.
+## Validation Dataset:
 
-## How is accuracy of the algorithm defined?
-Jaccard and Dice similarity to the ground truth.
+- Imaging modality
+  - Cropped rectangular volumes where only the region around the hippocampus has been cut out from MRI scans of the full brain .
 
-## What data can the algorithm operate on?
-MRI scans on hippocampus stored in the DICOM format.
+## **Ground Truth Acquisition Methodology:**
+
+The silver standard from reading of 3-4 radiologists.
+
+## **Algorithm Performance Standard:**
+Jaccard and Dice similarity.
